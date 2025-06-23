@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Neuronauta"
+config/name="Neuronautas"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://assets/icon.svg"
+config/icon="res://icon.svg"
 
 [autoload]
 
@@ -23,9 +23,6 @@ SceneManager="*res://scripts/scene_manager.gd"
 
 window/size/viewport_width=400
 window/size/viewport_height=600
-window/stretch/mode="canvas_items"
-mouse_cursor/size/viewport_height=720
-mouse_cursor/size/viewport_width=1280
 
 [rendering]
 
