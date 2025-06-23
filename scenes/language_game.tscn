@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://btgulx8k02uy8"]
+
+[ext_resource type="Script" path="res://scripts/language_game.gd" id="1_2f5lu"]
+
+[node name="language_game" type="Node2D"]
+script = ExtResource("1_2f5lu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+offset_right = 14.0
+offset_bottom = 37.0
+scale = Vector2(28.8054, 16.2041)
+color = Color(0.0470588, 0.0392157, 0.101961, 1)

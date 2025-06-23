@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://hg18rjjlwvx8"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cw220"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_cw220")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+offset_right = 14.0
+offset_bottom = 37.0
+scale = Vector2(28.8054, 16.2041)
+color = Color(0.0470588, 0.0392157, 0.101961, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+offset_right = 400.0
+offset_bottom = 600.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ativar região cerebral"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="MemoryButton" type="Button" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+text = "Jogo da memória"
+
+[node name="ReflexButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jogo de reflexo"
+
+[node name="LanguageButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jogo da linguagem"
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+offset_right = 400.0
+offset_bottom = 128.0
+text = "Neuronautas"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="pressed" from="VBoxContainer/MemoryButton" to="." method="_on_memory_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ReflexButton" to="." method="_on_reflex_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LanguageButton" to="." method="_on_language_button_pressed"]
