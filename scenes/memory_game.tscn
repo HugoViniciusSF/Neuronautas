@@ -1,11 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://60x73txvcnqj"]
+[gd_scene load_steps=4 format=3 uid="uid://60x73txvcnqj"]
 
 [ext_resource type="Script" path="res://scripts/memory_game.gd" id="1_e56hb"]
+[ext_resource type="Texture2D" uid="uid://c1cgl360u8vlx" path="res://assets/NeuronautasPaginas.png" id="2_ys73w"]
+[ext_resource type="FontFile" uid="uid://db5j82d65e1uw" path="res://assets/fonts/ComingSoon-Regular.ttf" id="3_sw6v4"]
 
 [node name="memory_game" type="Node2D"]
 script = ExtResource("1_e56hb")
 
+[node name="NeuronautasPaginas" type="Sprite2D" parent="."]
+position = Vector2(200, 300)
+texture = ExtResource("2_ys73w")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 clip_contents = true
 offset_right = 14.0
 offset_bottom = 37.0
@@ -17,6 +24,7 @@ offset_left = 40.0
 offset_top = 32.0
 offset_right = 360.0
 offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_sw6v4")
 text = "Observe a sequência:"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -48,7 +56,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.466667, 0.866667, 0.466667, 1)
+color = Color(0.1659, 0.79, 0.1659, 1)
 
 [node name="RedPad" type="Button" parent="VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(90, 90)
@@ -63,7 +71,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(1, 0.819608, 0.862745, 1)
+color = Color(1, 0.21, 0.394333, 1)
 
 [node name="YellowPad" type="Button" parent="VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(90, 90)
@@ -78,7 +86,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.992157, 0.992157, 0.588235, 1)
+color = Color(1, 0.8505, 0.31, 1)
 
 [node name="BluePad" type="Button" parent="VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(90, 90)
@@ -93,14 +101,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.301961, 0.611765, 0.85098, 1)
+color = Color(0.211765, 0.27451, 0.784314, 1)
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_sw6v4")
 text = "Iniciar"
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_sw6v4")
 text = "Voltar para o menu"
 
 [node name="GameTimer" type="Timer" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0iunoix5f51"
-path="res://.godot/imported/Neuronio.png-e2fc692478706e5aa24ce73b8a57ddd1.ctex"
+uid="uid://xj1o75kq3pxd"
+path="res://.godot/imported/Neuronautas.png-85fc03d0e4f2338615180fa4a4b94a8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Neuronio.png"
-dest_files=["res://.godot/imported/Neuronio.png-e2fc692478706e5aa24ce73b8a57ddd1.ctex"]
+source_file="res://assets/Neuronautas.png"
+dest_files=["res://.godot/imported/Neuronautas.png-85fc03d0e4f2338615180fa4a4b94a8b.ctex"]
 
 [params]
 

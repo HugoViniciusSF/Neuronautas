@@ -23,6 +23,7 @@ SceneManager="*res://scripts/scene_manager.gd"
 
 window/size/viewport_width=400
 window/size/viewport_height=600
+window/size/resizable=false
 
 [rendering]
 
