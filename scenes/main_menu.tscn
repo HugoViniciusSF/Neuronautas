@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://hg18rjjlwvx8"]
+[gd_scene load_steps=5 format=3 uid="uid://hg18rjjlwvx8"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cw220"]
 [ext_resource type="Texture2D" uid="uid://xj1o75kq3pxd" path="res://assets/Neuronautas.png" id="3_a3ayy"]
 [ext_resource type="FontFile" uid="uid://db5j82d65e1uw" path="res://assets/fonts/ComingSoon-Regular.ttf" id="3_uv71y"]
+[ext_resource type="Texture2D" uid="uid://byrpuwgqsity2" path="res://assets/Personagem.png" id="4_kucbn"]
 
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_cw220")
@@ -64,6 +65,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 uppercase = true
+
+[node name="Personagem" type="Sprite2D" parent="."]
+position = Vector2(48, 160)
+scale = Vector2(0.101563, 0.101563)
+texture = ExtResource("4_kucbn")
 
 [connection signal="pressed" from="VBoxContainer/MemoryButton" to="." method="_on_memory_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ReflexButton" to="." method="_on_reflex_button_pressed"]
