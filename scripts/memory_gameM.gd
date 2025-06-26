@@ -6,7 +6,7 @@ extends Node2D
 @onready var pads_container: GridContainer = $VBoxContainer/GridContainer
 @onready var game_timer: Timer = $GameTimer 
 
-const PADS = ["GreenPad", "RedPad", "YellowPad", "BluePad"]
+const PADS = ["GreenPad", "RedPad", "YellowPad", "BluePad", "OrangePad", "CianoPad"]
 var original_pad_colors: Dictionary = {}
 var sequence: Array[String] = []
 var player_sequence: Array[String] = []
@@ -129,4 +129,12 @@ func _on_red_pad_pressed():
 
 
 func _on_green_pad_pressed():
+	pass # Replace with function body.
+
+
+func _on_orange_pad_pressed():
+	pass # Replace with function body.
+
+
+func _on_ciano_pad_pressed():
 	pass # Replace with function body.

@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://60x73txvcnqj"]
+[gd_scene load_steps=4 format=3 uid="uid://bh02e7mmpe8q1"]
 
-[ext_resource type="Script" path="res://scripts/memory_game.gd" id="1_e56hb"]
-[ext_resource type="Texture2D" uid="uid://c1cgl360u8vlx" path="res://assets/NeuronautasPaginas.png" id="2_ys73w"]
-[ext_resource type="FontFile" uid="uid://db5j82d65e1uw" path="res://assets/fonts/ComingSoon-Regular.ttf" id="3_sw6v4"]
+[ext_resource type="Texture2D" uid="uid://c1cgl360u8vlx" path="res://assets/NeuronautasPaginas.png" id="1_4ix37"]
+[ext_resource type="Script" path="res://scripts/memory_gameH.gd" id="1_527cy"]
+[ext_resource type="FontFile" uid="uid://db5j82d65e1uw" path="res://assets/fonts/ComingSoon-Regular.ttf" id="2_yo3hq"]
 
-[node name="memory_game" type="Node2D"]
-script = ExtResource("1_e56hb")
+[node name="memory_gameH" type="Node2D"]
+script = ExtResource("1_527cy")
 
 [node name="NeuronautasPaginas" type="Sprite2D" parent="."]
 position = Vector2(200, 300)
-texture = ExtResource("2_ys73w")
+texture = ExtResource("1_4ix37")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -24,7 +24,7 @@ offset_left = 40.0
 offset_top = 32.0
 offset_right = 360.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("3_sw6v4")
+theme_override_fonts/font = ExtResource("2_yo3hq")
 text = "Observe a sequência:"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -33,7 +33,7 @@ autowrap_mode = 2
 offset_left = 40.0
 offset_top = 96.0
 offset_right = 360.0
-offset_bottom = 502.0
+offset_bottom = 504.0
 theme_override_constants/separation = 20
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
@@ -41,10 +41,10 @@ clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-columns = 2
+columns = 4
 
 [node name="GreenPad" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(90, 90)
+custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 focus_mode = 0
 
@@ -56,10 +56,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.1659, 0.79, 0.1659, 1)
+color = Color(0.164706, 0.788235, 0.164706, 1)
 
 [node name="RedPad" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(90, 90)
+custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 focus_mode = 0
 
@@ -71,10 +71,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(1, 0.21, 0.394333, 1)
+color = Color(1, 0.211765, 0.396078, 1)
 
 [node name="YellowPad" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(90, 90)
+custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 focus_mode = 0
 
@@ -86,10 +86,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(1, 0.8505, 0.31, 1)
+color = Color(1, 0.85098, 0.309804, 1)
 
 [node name="BluePad" type="Button" parent="VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(90, 90)
+custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 focus_mode = 0
 
@@ -103,16 +103,74 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.211765, 0.27451, 0.784314, 1)
 
+[node name="OrangePad" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/GridContainer/OrangePad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.329412, 0.211765, 1)
+
+[node name="CianoPad" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/GridContainer/CianoPad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.788235, 0.776471, 1)
+
+[node name="PurPad" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/GridContainer/PurPad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.698039, 0, 0.815686, 1)
+
+[node name="BlueMPad" type="Button" parent="VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+focus_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/GridContainer/BlueMPad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.105882, 0.0392157, 0.309804, 1)
+
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_sw6v4")
 text = "Iniciar"
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_sw6v4")
 text = "Voltar"
 
 [node name="GameTimer" type="Timer" parent="."]
@@ -121,6 +179,10 @@ text = "Voltar"
 [connection signal="pressed" from="VBoxContainer/GridContainer/RedPad" to="." method="_on_red_pad_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/YellowPad" to="." method="_on_yellow_pad_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/BluePad" to="." method="_on_blue_pad_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/OrangePad" to="." method="_on_orange_pad_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/CianoPad" to="." method="_on_ciano_pad_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/PurPad" to="." method="_on_pur_pad_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/BlueMPad" to="." method="_on_blue_m_pad_pressed"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
