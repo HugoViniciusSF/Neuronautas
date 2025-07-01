@@ -1,6 +1,5 @@
 extends Control
 
-# CAMINHO ATUALIZADO: Os labels agora são acessados diretamente do nó raiz.
 @onready var score_label = $ScoreLabel
 @onready var timer_label = $TimerLabel
 
