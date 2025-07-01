@@ -134,11 +134,13 @@ color = Color(0, 0.788235, 0.776471, 1)
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kutla")
 text = "Iniciar"
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kutla")
 text = "Voltar"
 
 [node name="GameTimer" type="Timer" parent="."]
