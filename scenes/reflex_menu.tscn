@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsqo20pooff6l"]
+
+[ext_resource type="Script" path="res://scripts/reflex_menu.gd" id="1_7sipy"]
+[ext_resource type="Texture2D" uid="uid://xj1o75kq3pxd" path="res://assets/Neuronautas.png" id="1_c6dk5"]
+[ext_resource type="Texture2D" uid="uid://byrpuwgqsity2" path="res://assets/Personagem.png" id="2_g1pax"]
+[ext_resource type="FontFile" uid="uid://db5j82d65e1uw" path="res://assets/fonts/ComingSoon-Regular.ttf" id="3_rbvqn"]
+
+[node name="reflex_menu" type="Node2D"]
+script = ExtResource("1_7sipy")
+
+[node name="Neuronautas" type="Sprite2D" parent="."]
+position = Vector2(200, 300)
+texture = ExtResource("1_c6dk5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+offset_left = 40.0
+offset_top = 136.0
+offset_right = 360.0
+offset_bottom = 600.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="MLButton" type="Button" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rbvqn")
+text = "Modo livre"
+
+[node name="30Button" type="Button" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rbvqn")
+text = "30 segundos"
+
+[node name="60Button" type="Button" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rbvqn")
+text = "60 segundos"
+
+[node name="PButton" type="Button" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rbvqn")
+text = "Personalizado"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rbvqn")
+text = "Voltar para o menu"
+
+[node name="Personagem" type="Sprite2D" parent="."]
+position = Vector2(48, 160)
+scale = Vector2(0.101563, 0.101563)
+texture = ExtResource("2_g1pax")
+
+[connection signal="pressed" from="VBoxContainer/MLButton" to="." method="_on_reflexML_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/30Button" to="." method="_on_reflex30_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/60Button" to="." method="_on_reflex60_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/PButton" to="." method="_on_reflexP_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
